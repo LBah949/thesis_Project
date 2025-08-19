@@ -7,7 +7,7 @@
 <canvas id="topRated" height="100"></canvas>
 
 <?php
-// Fetch data for charts
+// This code Fetch data for charts
 $years = $conn->query("SELECT year, COUNT(*) as total FROM dissertations GROUP BY year ORDER BY year ASC");
 $departments = $conn->query("SELECT department, COUNT(*) as total FROM dissertations GROUP BY department ORDER BY total DESC");
 $topRated = $conn->query("SELECT title, AVG(rating) as avg_rating FROM reviews JOIN dissertations d ON reviews.dissertation_id=d.id GROUP BY dissertation_id ORDER BY avg_rating DESC LIMIT 5");
@@ -30,7 +30,8 @@ while ($row = $topRated->fetch_assoc()) {
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-// Dissertations per year
+    
+// Chart to show Dissertations per year
 new Chart(document.getElementById("dissertationsPerYear"), {
     type: 'line',
     data: {
@@ -44,7 +45,7 @@ new Chart(document.getElementById("dissertationsPerYear"), {
     }
 });
 
-// Department distribution
+// Chart that show Department distribution
 new Chart(document.getElementById("departmentDistribution"), {
     type: 'bar',
     data: {
