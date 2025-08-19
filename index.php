@@ -57,7 +57,8 @@ $result = $stmt->get_result();
 <!DOCTYPE html>
 <head>
     <style>
-        .dissertation-grid {
+            /*Dissertation cards layout || using grid format*/
+.dissertation-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
