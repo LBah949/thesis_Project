@@ -1,0 +1,433 @@
+/* ============================
+   Global Styles for Dissertation Repository
+   Author: Your Name | Date: 2025
+============================ */
+
+/* ---------- 1. Root Defaults ---------- */
+:root {
+    --primary-color: #1e3c72;
+    --primary-dark: #16315d;
+    --accent-light: #f4f4f4;
+    --border-radius: 8px;
+    --transition: 0.3s ease;
+    --font: 'Segoe UI', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+
+/* ---------- 2. Navigation Bar ---------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover, .navbar a.active {
+    border-bottom: 2px solid white;
+}
+
+/* ---------- 3. Hero Section ---------- */
+.hero {
+    background: linear-gradient(to right, #1e3c72, #2a5298), url('../assets/images/hero-bg.jpg') no-repeat center center / cover;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    min-height: 300px;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #f9f9f9;
+}
+
+.hero-btn {
+    background-color: #ffffff;
+    color: #2a5298;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: #c4d8fc;
+}
+/* ---------- 9. Filter Form Styles ---------- */
+.filter-box  {
+    max-width: 800px;
+    margin: 40px auto 30px;
+    padding: 20px;
+    background: #fdfdfd;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-form select,
+.filter-form input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #bbb;
+    border-radius: var(--border-radius);
+    min-width: 160px;
+    flex: 1;
+}
+
+.filter-form input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: bold;
+    transition: background var(--transition);
+}
+
+.filter-form input[type="submit"]:hover {
+    background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+    .filter-form {
+        flex-direction: column;
+    }
+
+    .filter-form select,
+    .filter-form input[type="text"],
+    .filter-form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .hero {
+        padding: 40px 10px;
+    }
+}
+
+/* ---------- 4. Form Styles ---------- */
+.form-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+.form-container input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    transition: background var(--transition);
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ---------- 5. Table Styles ---------- */
+.table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ---------- 6. Dissertation Card Styles ---------- */
+
+.dissertation-card {
+ /* width: fit-content;*/
+    background:bisque;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.dissertation-card h3 {
+    color: #1e3c72;
+}
+.dissertation-card a {
+    color: #1e3c72;
+    text-decoration: none;
+    font-weight: bold;
+}
+.dissertation-card a:hover {
+    text-decoration: underline;
+}
+
+#view-details {
+    background-color: whitesmoke;
+    color: #e0e0e0;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* ---------- 7. Buttons ---------- */
+.btn {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background var(--transition);
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+
+/*About the Developers*/
+.about-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.about-container h2 {
+    text-align: center;
+    color: #1e3c72;
+    margin-bottom: 40px;
+}
+
+.developer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.dev-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.dev-card:hover {
+    transform: translateY(-5px);
+}
+
+.dev-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #1e3c72;
+    margin-bottom: 15px;
+}
+
+.dev-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.dev-role {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.dev-desc {
+    font-size: 0.92rem;
+    color: #333;
+    line-height: 1.5;
+}
+@media (max-width: 768px) {
+    .developer-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.dev-contacts {
+    margin-top: 15px;
+}
+
+.dev-contacts a {
+    font-size: 1.3rem;
+    margin: 0 8px;
+    color: #1e3c72;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.dev-contacts a:hover {
+    color: #0a244d;
+}
+.contact-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) saturate(100%) invert(16%) sepia(18%) saturate(730%) hue-rotate(177deg) brightness(98%) contrast(90%);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.dev-contacts a:hover .contact-icon {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(9%) sepia(8%) saturate(536%) hue-rotate(177deg) brightness(93%) contrast(88%);
+}
+
+/* About Faculty*/
+.about-faculty-section {
+    background: url('assets/images/faculty-bg.jpg') no-repeat center center/cover;
+    min-height: 90vh;
+    padding: 60px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.about-faculty-content {
+    max-width: 800px;
+    background-color: rgba(0, 0, 50, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.about-faculty-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.about-faculty-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ---------- 8. Footer ---------- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
